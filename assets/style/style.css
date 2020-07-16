@@ -30,6 +30,8 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 nav .logo {
   font-family: Allura, sans-serif;
@@ -129,7 +131,7 @@ nav .nav-icons {
 }
 .discover::before {
   content: '';
-  height: 660px;
+  height: 620px;
   width: 100%;
   background: url(../img/bg-menu-01.jpg) center/cover;
   position: absolute;
@@ -165,7 +167,6 @@ nav .nav-icons {
   color: #222;
   border-top: 4px solid #AF7746;
   width: 85%;
-  min-width: 500px;
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem 0;
@@ -330,6 +331,7 @@ nav .nav-icons {
   font-size: 1.3rem;
   font-family: Poppins, sans-serif;
   font-weight: 100;
+  padding: 0 .5rem;
 }
 .events img {
   margin: 2.5rem 0 2rem;
@@ -421,4 +423,185 @@ nav .nav-icons {
 }
 .event-3 h5 {
   margin-top: 4rem;
+}
+/* ************************* QUOTE ************************** */
+.quote {
+  background: #21201E;
+  padding: 8rem 0 350px;
+  position: relative;
+}
+.quote:after {
+  content: '';
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  background: url(../img/gmap.jpg) center/cover;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+}
+.quote-container {
+  background: rgb(247, 247, 247);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 5rem 4rem;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 3px #333;
+  z-index: 3;
+}
+.quote-container:before {
+  content: '';
+  position: absolute;
+  background: url(../img/avatar-02.jpg) center/cover;
+  height: 60px;
+  width: 60px;
+  top: -31px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.quote-container .text-container {
+  line-height: 30px;
+}
+.quote-container .text-container:before {
+  content: '\275D';
+}
+.quote-container .text-container:after {
+  content: '\275E';
+}
+.quote-container .text-container:before,
+.quote-container .text-container:after {
+  font-size: 1.5rem;
+}
+.quote-container h2 {
+  margin: 2rem 0 1rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 100;
+}
+.quote-container p {
+  color: rgb(166,114,69);
+}
+/* *********************** FOOTER *************************** */
+footer {
+  background: url(../img/bg-footer.jpg) center/cover;
+  text-align: left;
+  padding: 4rem 2rem;
+  color: #eee;
+}
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer-content h2 {
+  font-family: Allura, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: rgb(166,114,69);
+  margin-bottom: 1rem;
+}
+.footer-content .left-part {
+  padding-right: 2rem;
+  line-height: 30px;
+}
+.footer-content .left-part p {
+  font-size: .9rem;
+  color: rgb(129, 129, 129);
+}
+.footer-content .right-part {
+  padding-left: 3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.footer-content .right-part h3 {
+  font-size: .85rem;
+}
+.footer-content .newsletter input {
+  margin-top: 1rem;
+  background: none;
+  border: 1px solid rgba(166, 114, 69, 0.151);
+  padding: 7px 13px;
+  width: 250px;
+}
+.footer-content .follow-us {
+  display: flex;
+  margin-top: 3rem;
+}
+.footer-content .follow-us ul {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  color: #595956;
+  font-size: .8rem;
+}
+@media screen and (max-width: 940px){
+  .form-inputs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 860px){
+  .discover .meals {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+@media screen and (max-width: 690px){
+  nav ul {
+    display: none;
+  }
+  nav .nav-icons {
+    width: 30%;
+  }
+  .intro {
+    display: block;
+  }
+  .intro-pic {
+    display: none;
+  }
+  .events {
+    display: none;
+  }
+  .form-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .footer-content .right-part {
+    padding-left: 1rem;
+  }
+  .footer-content .newsletter input {
+    width: 94px;
+  }
+  .footer-content .follow-us {
+    display: block;
+  }
+  .footer-content .follow-us ul {
+    justify-content: space-between;
+    margin-top: .7rem;
+    width: 130px;
+  }
+}
+@media screen and (max-width: 540px){
+  .discover ul,
+  .form {
+    display: none;
+  }
+  .discover .meal {
+    margin: 0.3rem;
+    grid-template-columns: 20% 60% 20%;
+  }
+  .discover .meal img {
+    height: 40px;
+  }
+  .discover .meal .meal-text {
+    font-size: .6rem;
+  }
+  .quote-container {
+    padding: 2.5rem .5rem;
+  }
+  .footer-content .follow-us ul {
+    display: block;
+  }
 }
